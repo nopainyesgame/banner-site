@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Orbitron:wght@700;900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    overflow: hidden;
+    background: black;
+}
+
+
+.banner {
+
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+
+}
+
+
+video {
+
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+}
+
+
+/* camada escura inferior */
+
+.overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+    linear-gradient(
+        to bottom,
+        transparent 35%,
+        rgba(0,0,0,0.85)
+    );
+
+}
+
+
+/* textos */
+
+.content {
+
+    position: absolute;
+
+    width: 100%;
+
+    bottom: 12%;
+
+    text-align: center;
+
+    color:white;
+
+}
+
+
+/* título */
+
+h1 {
+
+    font-family: 'Orbitron', sans-serif;
+
+    font-size: clamp(45px, 7vw, 100px);
+
+    letter-spacing: 15px;
+
+    line-height: 1.1;
+
+
+    color:white;
+
+
+    text-shadow:
+
+    0 0 10px #00d9ff,
+    0 0 25px #ff00ff;
+
+
+    animation:
+    pulse 3s infinite;
+
+}
+
+
+/* subtítulo */
+
+h2 {
+
+    margin-top:25px;
+
+    font-family:'Montserrat', sans-serif;
+
+    font-size:clamp(18px,2vw,32px);
+
+    font-weight:500;
+
+    opacity:.9;
+
+}
+
+
+/* ícones */
+
+.icons {
+
+    margin-top:25px;
+
+    font-size:45px;
+
+    animation:float 3s infinite ease-in-out;
+
+}
+
+
+
+/* animações */
+
+
+@keyframes pulse {
+
+    0%,100% {
+
+        filter:brightness(1);
+
+    }
+
+
+    50% {
+
+        filter:brightness(1.35);
+
+    }
+
+}
+
+
+
+@keyframes float {
+
+    50% {
+
+        transform:translateY(-8px);
+
+    }
+
+}
