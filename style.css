@@ -2,323 +2,329 @@
 
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+
+margin:0;
+
+padding:0;
+
+box-sizing:border-box;
+
 }
+
 
 
 html, body {
 
-    width:100%;
-    height:100%;
-    overflow:hidden;
-    background:#000;
+width:100%;
+
+height:100%;
+
+overflow:hidden;
+
+background:black;
 
 }
 
 
-/* CONTAINER DO BANNER */
 
 .banner {
 
-    position:relative;
+position:relative;
 
-    width:100vw;
+width:100vw;
 
-    height:100vh;
+height:100vh;
 
-    overflow:hidden;
+overflow:hidden;
 
 }
 
 
-
-/* VIDEO DE FUNDO */
 
 video {
 
-    position:absolute;
+position:absolute;
 
-    width:100%;
+width:100%;
 
-    height:100%;
+height:100%;
 
-    object-fit:cover;
+object-fit:cover;
 
-    object-position:center center;
+object-position:center center;
 
 }
 
 
-
-/* ESCURECIMENTO CINEMATOGRÁFICO */
 
 .overlay {
 
-    position:absolute;
 
-    inset:0;
+position:absolute;
+
+inset:0;
 
 
-    background:
+background:
 
-    linear-gradient(
+linear-gradient(
 
-        to bottom,
+to bottom,
 
-        rgba(0,0,0,0.05) 20%,
+rgba(0,0,0,0.05),
 
-        rgba(0,0,0,0.85) 85%
+rgba(0,0,0,0.85)
 
-    );
+);
+
 
 }
 
 
-
-/* BLOCO DE TEXTO */
 
 .content {
 
-    position:absolute;
 
-    width:100%;
+position:absolute;
 
-    left:0;
+width:100%;
 
+left:0;
 
-    bottom:12%;
-
-
-    text-align:center;
+bottom:12%;
 
 
-    color:white;
+text-align:center;
 
 
-    padding:20px;
+color:white;
+
+
+padding:20px;
+
 
 }
 
 
-
-/* TITULO PRINCIPAL */
 
 h1 {
 
 
-    font-family:'Orbitron', sans-serif;
+font-family:'Orbitron', sans-serif;
 
 
-    font-weight:900;
+font-weight:900;
 
 
-    font-size:clamp(42px, 6vw, 90px);
+font-size:clamp(42px,6vw,90px);
 
 
-    line-height:1.05;
+line-height:1.05;
 
 
-    letter-spacing:14px;
+letter-spacing:14px;
 
 
-    color:#ffffff;
-
-
-
-    text-shadow:
-
-
-    0 0 8px #00d9ff,
-
-    0 0 18px #0077ff,
-
-    0 0 30px #ff00ff;
+color:white;
 
 
 
-    animation:
+text-shadow:
 
-    brilho 3s infinite ease-in-out;
+
+0 0 8px #00d9ff,
+
+0 0 18px #0077ff,
+
+0 0 30px #ff00ff;
+
+
+
+animation:
+
+brilho 3s infinite ease-in-out;
 
 
 }
 
-
-
-/* SUBTITULO */
 
 
 h2 {
 
 
-    margin-top:22px;
+margin-top:22px;
 
 
-    font-family:'Montserrat', sans-serif;
+font-family:'Montserrat', sans-serif;
 
 
-    font-size:clamp(18px, 2.2vw, 32px);
+font-size:clamp(18px,2.2vw,32px);
 
 
-    font-weight:500;
+font-weight:500;
 
 
-    letter-spacing:2px;
+letter-spacing:2px;
 
 
-    color:white;
-
-
-    opacity:0.9;
+opacity:0.9;
 
 
 }
 
-
-
-/* ICONES */
 
 
 .icons {
 
-    margin-top:25px;
 
-    display:flex;
+margin-top:25px;
 
-    justify-content:center;
 
-    gap:35px;
+display:flex;
+
+
+justify-content:center;
+
+
+gap:35px;
+
 
 }
+
 
 
 .icons svg {
 
-    width:42px;
 
-    height:42px;
-
-    fill:none;
-
-    stroke:white;
-
-    stroke-width:3;
+width:42px;
 
 
-    filter:
-
-    drop-shadow(0 0 8px white);
+height:42px;
 
 
-    opacity:0.9;
+fill:none;
 
 
-    animation:
+stroke:white;
 
-    flutuar 4s infinite ease-in-out;
+
+stroke-width:3;
+
+
+
+filter:
+
+drop-shadow(0 0 8px white);
+
+
+
+opacity:0.9;
+
+
+animation:
+
+flutuar 4s infinite ease-in-out;
+
 
 }
+
 
 
 .icons svg:nth-child(2){
 
-    animation-delay:0.5s;
+animation-delay:.5s;
 
 }
+
 
 
 .icons svg:nth-child(3){
 
-    animation-delay:1s;
+animation-delay:1s;
 
 }
 
 
-
-/* ANIMACAO DO TITULO */
 
 
 @keyframes brilho {
 
 
-    0%,100% {
+0%,100%{
 
-        filter:brightness(1);
-
-    }
-
-
-    50% {
-
-        filter:brightness(1.35);
-
-    }
+filter:brightness(1);
 
 }
 
 
+50%{
 
-/* ANIMACAO DOS ICONES */
+filter:brightness(1.35);
+
+}
+
+
+}
+
 
 
 @keyframes flutuar {
 
 
-    0%,100% {
+0%,100%{
 
-        transform:translateY(0);
+transform:translateY(0);
 
-    }
+}
 
 
-    50% {
+50%{
 
-        transform:translateY(-8px);
+transform:translateY(-8px);
 
-    }
+}
+
 
 }
 
 
 
-/* AJUSTE PARA CELULAR */
-
-
 @media(max-width:700px){
 
 
-    .content {
+.content{
 
-        bottom:10%;
+bottom:10%;
 
-    }
-
-
-    h1 {
+}
 
 
-        letter-spacing:8px;
 
-        font-size:42px;
+h1{
 
-    }
+letter-spacing:8px;
 
+font-size:42px;
 
-    h2 {
-
-
-        font-size:18px;
-
-    }
+}
 
 
-    .icons {
+
+h2{
+
+font-size:18px;
+
+}
 
 
-        font-size:35px;
 
-    }
+.icons svg{
+
+width:35px;
+
+height:35px;
+
+}
+
 
 }
